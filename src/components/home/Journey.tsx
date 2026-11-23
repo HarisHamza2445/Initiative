@@ -33,6 +33,14 @@ export function Journey() {
               ))}
             </svg>
           </div></div>
+          <ol className="jlist" aria-label="Journey steps">
+            {JOURNEY.map((j, i) => (
+              <li key={j.t} className={j.gold ? 'gold' : undefined}>
+                <span className="jc"><Icon d={JICON[i]} s={18} /></span>
+                <div><b>{j.t}</b><span>{j.tag}</span></div>
+              </li>
+            ))}
+          </ol>
         </div>
       </div>
     </section>
